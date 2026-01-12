@@ -181,7 +181,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_090_Up_Full,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
@@ -189,7 +189,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_090_Up_Full,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_090__up_full") {
@@ -211,7 +211,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_180,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
@@ -219,7 +219,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_180,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
     }
@@ -338,6 +338,20 @@ input.onGesture(Gesture.LogoUp, function () {
         )
         controller__Polar_OriginAtCenter__IdleCount_Int = 0
         controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+    }
+})
+input.onGesture(Gesture.TiltLeft, function () {
+    for (let index = 0; index <= 220; index++) {
+        quest_Motors.quest_Set_Degrees_By_Integer_ForServoArm_SMALL_Func(
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
+        index,
+        quest_Debug_Show_Enum.Dashboard_OLED
+        )
+        quest_Motors.quest_Set_Degrees_By_Integer_ForServoArm_SMALL_Func(
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
+        index,
+        quest_Debug_Show_Enum.Dashboard_OLED
+        )
     }
 })
 // BUG FIX: Switch from BlockCode vs TextCode
