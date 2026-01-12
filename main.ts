@@ -1,3 +1,120 @@
+function setup_System_Variables__UserCustomizable_Yes__Func () {
+    quest_Note_3.quest_Show_String_For_Note_Big_Func(
+    "THIS STACK CUSTOMIZABLE_YES"
+    )
+    if (true) {
+        quest_Note_1.quest_Show_String_For_Note_Big_Func(
+        "Variable & Constant: Customizable Settings"
+        )
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "GeekServo: For servo_360: start at 180"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Start w/ Label 'GeekServo' facing out for Servo_Arm_Left, for 180-degrees to face forward for optimum range"
+            )
+            servoArm_Now_Degrees_Int = 180
+            wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
+            wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, servoArm_Now_Degrees_Int)
+            if (false) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Obsolete?"
+                )
+                servoArm_DOWN_MAX_DEGREES_INT = 0
+                servoArm_UP_MAX_DEGREES_INT = 90
+                servoArm_Left_UP_DEGREES_INT = 20
+                servoArm_Right_UP_DEGREES_INT = 45
+                servoArm_Left_Up_Bool = true
+                servoArm_Right_Up_Bool = true
+            }
+        }
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Big_Func(
+            "25-0309-2040 This Section Obsolete, Replaced Below"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "GeekServo-360-Degrees-2kg: start at 180"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Start w/ Label 'GeekServo' facing out for Servo_Arm_Left, for 180-degrees to face forward for optimum range"
+            )
+            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+            "BBB-1: Next Block_Code Moddable..."
+            )
+            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+            "...Servo-Arm: 1-of-3: Default (degrees)"
+            )
+            servoArm_DEFAULT_DEGREES_INT = 90
+            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+            "BBB-2: Next Block_Code Moddable..."
+            )
+            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+            "...Servo-Arm: 2-of-3: Up-Max (degrees)"
+            )
+            servoArm_UP_MAX_DEGREES_INT = 360
+            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+            "BBB-3: Next Block_Code Moddable..."
+            )
+            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+            "...Servo-Arm: 3-of-3: Down-Max (degrees)"
+            )
+            servoArm_DOWN_MAX_DEGREES_INT = 0
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Servo-Arm: GeekServo_360_Degrees: Default"
+            )
+            servoArm_Now_Degrees_Int = servoArm_DEFAULT_DEGREES_INT
+            wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
+            wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, servoArm_Now_Degrees_Int)
+            quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+            "Arm-L:" + "Default= " + servoArm_Now_Degrees_Int,
+            0,
+            3
+            )
+            quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+            "Arm-R:" + "Default= " + servoArm_Now_Degrees_Int,
+            0,
+            4
+            )
+        }
+        if (true) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following limits repeating 'idle/stop' to .."
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            ".. not flood Led-5x5 and Network"
+            )
+            controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT
+            controller__Polar_OriginAtCenter__IdleCount_Int = 0
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following for Network Throttling.."
+            )
+            controller__Polar_OriginAtCenter__IdleCount_Int = 0
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "controller..IdleCount_ModulusNetworkThrottle_ADD_INT"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "..: 10, 5, 1 (for fastest response), 5"
+            )
+            controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 5
+            controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+            if (false) {
+                controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 5
+                controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 10
+            }
+        }
+        if (true) {
+            servoArm_Increment_Degrees_Int = 15
+            servoArm_Left_Now_Degrees_Int = 0
+            servoArm_Right_Now_Degrees_Int = 0
+            servoArm_MIN_DEGREES_INT = 0
+            servoArm_MAX_DEGREES_INT = 220
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "For ServoArm Buttons C/D: 1000ms :), 500ms"
+            )
+            controller__Button_TriggerDelay__MSEC_INT = 500
+        }
+    }
+}
 // // jwc 24-0214-0310-rq100-onecode-bot_controller-beginner-final.ts
 function screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func (screen_x_new_num: number, screen_y_new_num: number) {
     led.plotBrightness(screen_X_Old_Num, screen_Y_Old_Num, screen_XY_Brightness_Old_Num)
@@ -366,174 +483,6 @@ input.onGesture(Gesture.LogoUp, function () {
         }
     }
 })
-input.onGesture(Gesture.TiltLeft, function () {
-    for (let index = 0; index <= 220; index++) {
-        quest_Motors.quest_Set_Degrees_By_Integer_ForServoArm_SMALL_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
-        index,
-        quest_Debug_Show_Enum.Dashboard_OLED
-        )
-        quest_Motors.quest_Set_Degrees_By_Integer_ForServoArm_SMALL_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
-        index,
-        quest_Debug_Show_Enum.Dashboard_OLED
-        )
-    }
-})
-// BUG FIX: Switch from BlockCode vs TextCode
-// let device_Type_Controller_Bool = 0
-// 
-// let device_Mode_Edit_GroupChannelNum_Bool = 0
-// 
-// let motor_Power_Gear_02_MAX = 0
-// 
-// let motor_Power_Gear_01_MAX = 0
-// 
-// let device_Type_Controller_Bool = 0
-function setup_VariablesAndConstants_UserCustomizableNot_Func () {
-    if (true) {
-        quest_Note_3.quest_Show_String_For_Note_Big_Func(
-        "THIS STACK NOT CUSTOMIZABLE"
-        )
-        if (true) {
-            quest_Note_6.quest_Show_String_For_Note_Small_Func(
-            "Mannual Overrides to fix compiler bug"
-            )
-            quest_Note_6.quest_Show_String_For_Note_Small_Func(
-            "Following assignments prevent variables from being 'grayed' out"
-            )
-            if (true) {
-                // //jwc o device_Type_Bot_Bool = false
-                // //jwc o device_Type_Controller_Bool = false
-                _system_Hw_DeviceType__Null__ID_INT = 0
-                _system_Hw_DeviceType__Bot__ID_INT = 1
-                _system_Hw_DeviceType__Controller_Joystick__ID_INT = 2
-                if (true) {
-                    _system_Hw_DeviceType__Now__Id_Int = _system_Hw_DeviceType__Null__ID_INT
-                }
-            }
-            if (true) {
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Following Pixels_Max: Horizontal/Vertical: 512 -&- Diagonal: 887 [= sqrt(512^2 + 512^2)]"
-                )
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Was 15, try 30 to accomodate off_calibrated controllers"
-                )
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "24-0911-1220 jwc: try 30 to 50 (some joysticks: jittery idle)"
-                )
-                quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                "Optional Advanced Coding: Following Block_Code Moddable"
-                )
-                controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 50
-            }
-            if (true) {
-                controller__Polar_OriginAtCenter__AngleDegree__Int = 0
-                controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
-                controller__Polar_OriginAtCenter__MagnitudePixel__Int = 0
-            }
-            if (true) {
-                motor_Power_Full_Current_Pos = 0
-                motor_Power_Full_Current_Neg = 0
-                motor_Power_Half_Current = 0
-                motor_Power_ZERO_INT = 0
-                // //jwc ? // jwc: add to fix compiler error
-                // //jwc ? motor_Power_Gear_01_MAX = 0
-                // //jwc ? // jwc: add to fix compiler error
-                // //jwc ? motor_Power_Gear_02_MAX = 0
-                motor_Power_Gear_Number_Int = 0
-            }
-            if (true) {
-                screenBrightness_Heartbeat_Count_Int = 0
-            }
-            if (true) {
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "20msec = 50.0fps (More Noticeable Flicker vs 15msec = 66.7 fps)"
-                )
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "30fps is min for real-time response"
-                )
-                screen_Delay_MSEC_INT = 20
-            }
-            if (true) {
-                _system_Sw_ModeState__Null__ID_INT = 0
-                _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 1
-                _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 2
-                _system_Sw_ModeState__Autonomous__ID_INT = 3
-                _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 4
-                _system_Sw_ModeState__Test__ID_INT = 5
-                _system_Sw_ModeState__Reset__ID_INT = 6
-                if (true) {
-                    _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Null__ID_INT
-                }
-            }
-            if (true) {
-                screen_XY_Brightness_Old_Num = 0
-                screen_Y_Old_Num = 0
-                screen_X_Old_Num = 0
-            }
-            if (true) {
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Variable & Constant: Customizable Settings"
-                )
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Following Gears are not used in Level_1 but need these null declarations... "
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "...to allow Level_2 code to compile (though unused in Level_1)"
-                    )
-                    // jwc needed to fix compiler issue
-                    motor_Power_Gear_01_MAX = 0
-                    // jwc needed to fix compiler issue
-                    motor_Power_Gear_02_MAX = 0
-                }
-                if (true) {
-                    wuKong.mecanumWheel(
-                    wuKong.ServoList.S1,
-                    wuKong.ServoList.S3,
-                    wuKong.ServoList.S0,
-                    wuKong.ServoList.S2
-                    )
-                }
-                if (false) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "GeekServo: For servo_360: start at 180"
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Start w/ Label 'GeekServo' facing out for Servo_Arm_Left, for 180-degrees to face forward for optimum range"
-                    )
-                    servoArm_Now_Degrees_Int = 180
-                    wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
-                    wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, servoArm_Now_Degrees_Int)
-                    if (false) {
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "Obsolete?"
-                        )
-                        servoArm_DOWN_MAX_DEGREES_INT = 0
-                        servoArm_UP_MAX_DEGREES_INT = 90
-                        servoArm_Left_UP_DEGREES_INT = 20
-                        servoArm_Right_UP_DEGREES_INT = 45
-                        servoArm_Left_Up_Bool = true
-                        servoArm_Right_Up_Bool = true
-                    }
-                }
-                if (true) {
-                    quest_Dashboard.quest_Show_Oled_Cleared_Func(
-                    )
-                    quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-                    "Hello  : )",
-                    0,
-                    0
-                    )
-                }
-            }
-        }
-        quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2.1: Variables_n_Constants_Yes"
-        )
-    }
-}
 input.onButtonPressed(Button.AB, function () {
     // //jwc o if (device_Type_Controller_Bool || device_Type_Bot_Bool) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT || _system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT) {
@@ -607,6 +556,122 @@ input.onButtonPressed(Button.AB, function () {
     "Level 2.1: Variables_n_Constants_Yes"
     )
 })
+// BUG FIX: Switch from BlockCode vs TextCode
+// let device_Type_Controller_Bool = 0
+// 
+// let device_Mode_Edit_GroupChannelNum_Bool = 0
+// 
+// let motor_Power_Gear_02_MAX = 0
+// 
+// let motor_Power_Gear_01_MAX = 0
+// 
+// let device_Type_Controller_Bool = 0
+function setup_System_Variables__UserCustomizable_Not__Func () {
+    quest_Note_3.quest_Show_String_For_Note_Big_Func(
+    "THIS STACK CUSTOMIZABLE_NOT"
+    )
+    if (true) {
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
+        "Mannual Overrides to fix compiler bug"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
+        "Following assignments prevent variables from being 'grayed' out"
+        )
+        if (true) {
+            // //jwc o device_Type_Bot_Bool = false
+            // //jwc o device_Type_Controller_Bool = false
+            _system_Hw_DeviceType__Null__ID_INT = 0
+            _system_Hw_DeviceType__Bot__ID_INT = 1
+            _system_Hw_DeviceType__Controller_Joystick__ID_INT = 2
+            if (true) {
+                _system_Hw_DeviceType__Now__Id_Int = _system_Hw_DeviceType__Null__ID_INT
+            }
+        }
+        if (true) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following Pixels_Max: Horizontal/Vertical: 512 -&- Diagonal: 887 [= sqrt(512^2 + 512^2)]"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Was 15, try 30 to accomodate off_calibrated controllers"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "24-0911-1220 jwc: try 30 to 50 (some joysticks: jittery idle)"
+            )
+            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+            "Optional Advanced Coding: Following Block_Code Moddable"
+            )
+            controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 50
+        }
+        if (true) {
+            controller__Polar_OriginAtCenter__AngleDegree__Int = 0
+            controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
+            controller__Polar_OriginAtCenter__MagnitudePixel__Int = 0
+        }
+        if (true) {
+            motor_Power_Full_Current_Pos = 0
+            motor_Power_Full_Current_Neg = 0
+            motor_Power_Half_Current = 0
+            motor_Power_ZERO_INT = 0
+            // //jwc ? // jwc: add to fix compiler error
+            // //jwc ? motor_Power_Gear_01_MAX = 0
+            // //jwc ? // jwc: add to fix compiler error
+            // //jwc ? motor_Power_Gear_02_MAX = 0
+            motor_Power_Gear_Number_Int = 0
+        }
+        if (true) {
+            screenBrightness_Heartbeat_Count_Int = 0
+        }
+        if (true) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "20msec = 50.0fps (More Noticeable Flicker vs 15msec = 66.7 fps)"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "30fps is min for real-time response"
+            )
+            screen_Delay_MSEC_INT = 20
+        }
+        if (true) {
+            _system_Sw_ModeState__Null__ID_INT = 0
+            _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 1
+            _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 2
+            _system_Sw_ModeState__Autonomous__ID_INT = 3
+            _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 4
+            _system_Sw_ModeState__Test__ID_INT = 5
+            _system_Sw_ModeState__Reset__ID_INT = 6
+            if (true) {
+                _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Null__ID_INT
+            }
+        }
+        if (true) {
+            screen_XY_Brightness_Old_Num = 0
+            screen_Y_Old_Num = 0
+            screen_X_Old_Num = 0
+        }
+    }
+    if (true) {
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Following Gears are not used in Level_1 but need these null declarations... "
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "...to allow Level_2 code to compile (though unused in Level_1)"
+        )
+        // jwc needed to fix compiler issue
+        motor_Power_Gear_01_MAX = 0
+        // jwc needed to fix compiler issue
+        motor_Power_Gear_02_MAX = 0
+    }
+    if (true) {
+        wuKong.mecanumWheel(
+        wuKong.ServoList.S1,
+        wuKong.ServoList.S3,
+        wuKong.ServoList.S0,
+        wuKong.ServoList.S2
+        )
+    }
+    quest_Note_6.quest_Show_String_For_Note_Big_Func(
+    "Level 2.1: Variables_n_Constants_Yes"
+    )
+}
 radio.onReceivedString(function (receivedString) {
     if (true) {
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
@@ -702,9 +767,24 @@ function botModeInIdle_Fn () {
     }
     return false
 }
+input.onGesture(Gesture.LogoDown, function () {
+    for (let index = 0; index <= 220; index++) {
+        quest_Motors.quest_Set_Degrees_By_Integer_ForServoArm_SMALL_Func(
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
+        index,
+        quest_Debug_Show_Enum.Dashboard_OLED
+        )
+        quest_Motors.quest_Set_Degrees_By_Integer_ForServoArm_SMALL_Func(
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
+        index,
+        quest_Debug_Show_Enum.Dashboard_OLED
+        )
+    }
+})
 function setup_Code_For_System_Func () {
     if (true) {
-        setup_VariablesAndConstants_UserCustomizableNot_Func()
+        setup_System_Variables__UserCustomizable_Not__Func()
+        setup_System_Variables__UserCustomizable_Yes__Func()
         setup_Network_Func()
 setup_BotAndController_Func()
     }
@@ -736,33 +816,6 @@ setup_BotAndController_Func()
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "Start w/ Label 'GeekServo' facing out for Servo_Arm_Left, for 180-degrees to face forward for optimum range"
         )
-        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-        "BBB-1: Next Block_Code Moddable..."
-        )
-        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-        "...Servo-Arm: 1-of-3: Default (degrees)"
-        )
-        servoArm_DEFAULT_DEGREES_INT = 90
-        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-        "BBB-2: Next Block_Code Moddable..."
-        )
-        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-        "...Servo-Arm: 2-of-3: Up-Max (degrees)"
-        )
-        servoArm_UP_MAX_DEGREES_INT = 360
-        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-        "BBB-3: Next Block_Code Moddable..."
-        )
-        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-        "...Servo-Arm: 3-of-3: Down-Max (degrees)"
-        )
-        servoArm_DOWN_MAX_DEGREES_INT = 0
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Servo-Arm: GeekServo_360_Degrees: Default"
-        )
-        servoArm_Now_Degrees_Int = servoArm_DEFAULT_DEGREES_INT
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, servoArm_Now_Degrees_Int)
         quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
         "Arm-L:" + "Default= " + servoArm_Now_Degrees_Int,
         0,
@@ -787,37 +840,13 @@ setup_BotAndController_Func()
         )
     }
     if (true) {
-        servoArm_Increment_Degrees_Int = 15
-        servoArm_Left_Now_Degrees_Int = 0
-        servoArm_Right_Now_Degrees_Int = 0
-        servoArm_MIN_DEGREES_INT = 0
-        servoArm_MAX_DEGREES_INT = 220
-    }
-    if (true) {
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Following limits repeating 'idle/stop' to .."
+        quest_Dashboard.quest_Show_Oled_Cleared_Func(
         )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        ".. not flood Led-5x5 and Network"
+        quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+        "Hello  : )",
+        0,
+        0
         )
-        controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT
-        controller__Polar_OriginAtCenter__IdleCount_Int = 0
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Following for Network Throttling.."
-        )
-        controller__Polar_OriginAtCenter__IdleCount_Int = 0
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "controller..IdleCount_ModulusNetworkThrottle_ADD_INT"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "..: 10, 5, 1 (for fastest response), 5"
-        )
-        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 5
-        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
-        if (false) {
-            controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 5
-            controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 10
-        }
     }
     if (true) {
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
@@ -834,23 +863,10 @@ setup_BotAndController_Func()
         )
     }
 }
-let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = 0
-let servoArm_DEFAULT_DEGREES_INT = 0
-let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
-let network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = 0
-let network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int = 0
-let servoArm_Right_Up_Bool = false
-let servoArm_Left_Up_Bool = false
-let servoArm_Right_UP_DEGREES_INT = 0
-let servoArm_Left_UP_DEGREES_INT = 0
-let servoArm_UP_MAX_DEGREES_INT = 0
-let servoArm_DOWN_MAX_DEGREES_INT = 0
-let servoArm_Now_Degrees_Int = 0
 let motor_Power_Gear_02_MAX = 0
 let motor_Power_Gear_01_MAX = 0
 let _system_Sw_ModeState__Test__ID_INT = 0
 let _system_Sw_ModeState__Autonomous__ID_INT = 0
-let _system_Sw_ModeState__Null__ID_INT = 0
 let screen_Delay_MSEC_INT = 0
 let motor_Power_Gear_Number_Int = 0
 let motor_Power_ZERO_INT = 0
@@ -860,28 +876,42 @@ let motor_Power_Full_Current_Pos = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
-let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
+let _system_Sw_ModeState__Null__ID_INT = 0
+let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
+let network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = 0
+let network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int = 0
 let _system_Hw_DeviceType__Bot__ID_INT = 0
-let controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 0
-let controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = 0
-let controller__Polar_OriginAtCenter__IdleCount_Int = 0
 let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
 let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
 let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
 let _system_Hw_DeviceType__Null__ID_INT = 0
 let _system_Hw_DeviceType__Now__Id_Int = 0
 let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
-let servoArm_Right_Now_Degrees_Int = 0
-let servoArm_MAX_DEGREES_INT = 0
-let servoArm_MIN_DEGREES_INT = 0
-let servoArm_Increment_Degrees_Int = 0
-let servoArm_Left_Now_Degrees_Int = 0
 let _system_Sw_ModeState__Reset__ID_INT = 0
 let _system_Sw_ModeState__Now__Id_Int = 0
 let screenBrightness_Heartbeat_Count_Int = 0
 let screen_XY_Brightness_Old_Num = 0
 let screen_Y_Old_Num = 0
 let screen_X_Old_Num = 0
+let controller__Button_TriggerDelay__MSEC_INT = 0
+let servoArm_MAX_DEGREES_INT = 0
+let servoArm_MIN_DEGREES_INT = 0
+let servoArm_Right_Now_Degrees_Int = 0
+let servoArm_Left_Now_Degrees_Int = 0
+let servoArm_Increment_Degrees_Int = 0
+let controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = 0
+let controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 0
+let controller__Polar_OriginAtCenter__IdleCount_Int = 0
+let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
+let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = 0
+let servoArm_DEFAULT_DEGREES_INT = 0
+let servoArm_Right_Up_Bool = false
+let servoArm_Left_Up_Bool = false
+let servoArm_Right_UP_DEGREES_INT = 0
+let servoArm_Left_UP_DEGREES_INT = 0
+let servoArm_UP_MAX_DEGREES_INT = 0
+let servoArm_DOWN_MAX_DEGREES_INT = 0
+let servoArm_Now_Degrees_Int = 0
 let network_GroupChannel_MyBotAndController_Base0_Int = 0
 images.createImage(`
     . # . # .
@@ -1557,7 +1587,7 @@ basic.forever(function () {
                     )
                     controller__Polar_OriginAtCenter__IdleCount_Int = 0
                     controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
-                    quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(1, quest_Time_Units_Enum.Seconds)
+                    quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(controller__Button_TriggerDelay__MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                 }
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
                 images.createImage(`
@@ -1574,7 +1604,7 @@ basic.forever(function () {
                     )
                     controller__Polar_OriginAtCenter__IdleCount_Int = 0
                     controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
-                    quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(1, quest_Time_Units_Enum.Seconds)
+                    quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(controller__Button_TriggerDelay__MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                 }
             }
             network__CpuCycle_Post__Management_Func()
