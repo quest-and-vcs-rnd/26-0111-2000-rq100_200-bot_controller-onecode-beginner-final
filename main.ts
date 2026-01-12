@@ -136,9 +136,9 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         images.createImage(`
             . . . . .
             . . . . .
-            # # . # #
             . . . . .
-            . . . . .
+            . # . # .
+            # . . . #
             `).showImage(0, 0)
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "If [0|360] is jittery, insure battery at 75% power min."
@@ -146,22 +146,30 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
-        quest_Note_2.quest_Show_String_For_Note_Big_Func(
-        "Below Moddable: S7_ServoArm_Left"
-        )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
-        quest_Debug_Show_Enum.Dashboard_OLED
-        )
-        quest_Note_2.quest_Show_String_For_Note_Big_Func(
-        "Below Moddable: S6_ServoArm_Right"
-        )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
-        quest_Debug_Show_Enum.Dashboard_OLED
-        )
+        if (true) {
+            quest_Note_2.quest_Show_String_For_Note_Big_Func(
+            "Below Moddable: S7_ServoArm_Left"
+            )
+            servoArm_Left_Now_Degrees_Int += servoArm_Increment_Degrees_Int * -1
+            servoArm_Left_Now_Degrees_Int = Math.constrain(servoArm_Left_Now_Degrees_Int, servoArm_MIN_DEGREES_INT, servoArm_MAX_DEGREES_INT)
+            quest_Motors.quest_Set_Degrees_By_Integer_ForServoArm_SMALL_Func(
+            quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
+            servoArm_Left_Now_Degrees_Int,
+            quest_Debug_Show_Enum.Dashboard_OLED
+            )
+        }
+        if (true) {
+            quest_Note_2.quest_Show_String_For_Note_Big_Func(
+            "Below Moddable: S6_ServoArm_Right"
+            )
+            servoArm_Right_Now_Degrees_Int += servoArm_Increment_Degrees_Int * -1
+            servoArm_Right_Now_Degrees_Int = Math.constrain(servoArm_Right_Now_Degrees_Int, servoArm_MIN_DEGREES_INT, servoArm_MAX_DEGREES_INT)
+            quest_Motors.quest_Set_Degrees_By_Integer_ForServoArm_SMALL_Func(
+            quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
+            servoArm_Right_Now_Degrees_Int,
+            quest_Debug_Show_Enum.Dashboard_OLED
+            )
+        }
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_045__up_half") {
         images.createImage(`
             # . . . #
@@ -176,52 +184,65 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
-        quest_Note_2.quest_Show_String_For_Note_Big_Func(
-        "Below Moddable: S7_ServoArm_Left"
-        )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
-        quest_Debug_Show_Enum.Dashboard_OLED
-        )
-        quest_Note_2.quest_Show_String_For_Note_Big_Func(
-        "Below Moddable: S6_ServoArm_Right"
-        )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
-        quest_Debug_Show_Enum.Dashboard_OLED
-        )
+        if (true) {
+            quest_Note_2.quest_Show_String_For_Note_Big_Func(
+            "Below Moddable: S7_ServoArm_Left"
+            )
+            servoArm_Left_Now_Degrees_Int += servoArm_Increment_Degrees_Int * 1
+            servoArm_Left_Now_Degrees_Int = Math.constrain(servoArm_Left_Now_Degrees_Int, servoArm_MIN_DEGREES_INT, servoArm_MAX_DEGREES_INT)
+            quest_Motors.quest_Set_Degrees_By_Integer_ForServoArm_SMALL_Func(
+            quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
+            servoArm_Left_Now_Degrees_Int,
+            quest_Debug_Show_Enum.Dashboard_OLED
+            )
+        }
+        if (true) {
+            quest_Note_2.quest_Show_String_For_Note_Big_Func(
+            "Below Moddable: S6_ServoArm_Right"
+            )
+            servoArm_Right_Now_Degrees_Int += servoArm_Increment_Degrees_Int * 1
+            servoArm_Right_Now_Degrees_Int = Math.constrain(servoArm_Right_Now_Degrees_Int, servoArm_MIN_DEGREES_INT, servoArm_MAX_DEGREES_INT)
+            quest_Motors.quest_Set_Degrees_By_Integer_ForServoArm_SMALL_Func(
+            quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
+            servoArm_Right_Now_Degrees_Int,
+            quest_Debug_Show_Enum.Dashboard_OLED
+            )
+        }
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_090__up_full") {
-        images.createImage(`
-            . # . # .
-            . # . # .
-            . . . . .
-            . . . . .
-            . . . . .
-            `).showImage(0, 0)
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "If [0|360] is jittery, insure battery at 75% power min."
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
-        )
-        quest_Note_2.quest_Show_String_For_Note_Big_Func(
-        "Below Moddable: S7_ServoArm_Left"
-        )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
-        quest_Debug_Show_Enum.Dashboard_OLED
-        )
-        quest_Note_2.quest_Show_String_For_Note_Big_Func(
-        "Below Moddable: S6_ServoArm_Right"
-        )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
-        quest_Debug_Show_Enum.Dashboard_OLED
-        )
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Big_Func(
+            "DISABLED: OBSOLETE"
+            )
+            images.createImage(`
+                . # . # .
+                . # . # .
+                . . . . .
+                . . . . .
+                . . . . .
+                `).showImage(0, 0)
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "If [0|360] is jittery, insure battery at 75% power min."
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
+            )
+            quest_Note_2.quest_Show_String_For_Note_Big_Func(
+            "Below Moddable: S7_ServoArm_Left"
+            )
+            quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
+            quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
+            quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
+            quest_Debug_Show_Enum.Dashboard_OLED
+            )
+            quest_Note_2.quest_Show_String_For_Note_Big_Func(
+            "Below Moddable: S6_ServoArm_Right"
+            )
+            quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
+            quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
+            quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
+            quest_Debug_Show_Enum.Dashboard_OLED
+            )
+        }
     }
 }
 function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
@@ -323,21 +344,26 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 input.onGesture(Gesture.LogoUp, function () {
-    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        images.createImage(`
-            . # . # .
-            . # . # .
-            . . . . .
-            . . . . .
-            . . . . .
-            `).showImage(0, 0)
-        radio.sendString("arm_090__up_full")
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Following 0-Reset to Allow Idle/Stop Afterwards"
+    if (false) {
+        quest_Note_1.quest_Show_String_For_Note_Big_Func(
+        "DISABLE: OBSOLETE"
         )
-        controller__Polar_OriginAtCenter__IdleCount_Int = 0
-        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+            images.createImage(`
+                . # . # .
+                . # . # .
+                . . . . .
+                . . . . .
+                . . . . .
+                `).showImage(0, 0)
+            radio.sendString("arm_090__up_full")
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following 0-Reset to Allow Idle/Stop Afterwards"
+            )
+            controller__Polar_OriginAtCenter__IdleCount_Int = 0
+            controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+        }
     }
 })
 input.onGesture(Gesture.TiltLeft, function () {
@@ -761,6 +787,13 @@ setup_BotAndController_Func()
         )
     }
     if (true) {
+        servoArm_Increment_Degrees_Int = 15
+        servoArm_Left_Now_Degrees_Int = 0
+        servoArm_Right_Now_Degrees_Int = 0
+        servoArm_MIN_DEGREES_INT = 0
+        servoArm_MAX_DEGREES_INT = 220
+    }
+    if (true) {
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "Following limits repeating 'idle/stop' to .."
         )
@@ -838,6 +871,11 @@ let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
 let _system_Hw_DeviceType__Null__ID_INT = 0
 let _system_Hw_DeviceType__Now__Id_Int = 0
 let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
+let servoArm_Right_Now_Degrees_Int = 0
+let servoArm_MAX_DEGREES_INT = 0
+let servoArm_MIN_DEGREES_INT = 0
+let servoArm_Increment_Degrees_Int = 0
+let servoArm_Left_Now_Degrees_Int = 0
 let _system_Sw_ModeState__Reset__ID_INT = 0
 let _system_Sw_ModeState__Now__Id_Int = 0
 let screenBrightness_Heartbeat_Count_Int = 0
@@ -1508,9 +1546,9 @@ basic.forever(function () {
                 images.createImage(`
                     . . . . .
                     . . . . .
-                    # # . # #
                     . . . . .
-                    . . . . .
+                    . # . # .
+                    # . . . #
                     `).showImage(0, 0)
                 radio.sendString("arm_000__down")
                 if (true) {
@@ -1519,6 +1557,7 @@ basic.forever(function () {
                     )
                     controller__Polar_OriginAtCenter__IdleCount_Int = 0
                     controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                    quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(1, quest_Time_Units_Enum.Seconds)
                 }
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
                 images.createImage(`
@@ -1535,6 +1574,7 @@ basic.forever(function () {
                     )
                     controller__Polar_OriginAtCenter__IdleCount_Int = 0
                     controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                    quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(1, quest_Time_Units_Enum.Seconds)
                 }
             }
             network__CpuCycle_Post__Management_Func()
