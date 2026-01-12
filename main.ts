@@ -1493,17 +1493,6 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "26-0111-2000-rq100_200-bot_controller-onecode-beginner-final"
-    )
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "(v0.1.0: 26-0111-2030)"
-    )
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "©️ 2025 Quest Institute. All rights reserved."
-    )
-})
-basic.forever(function () {
     if (true) {
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
         "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
@@ -1554,6 +1543,11 @@ basic.forever(function () {
         "Level 2.1: Variables_n_Constants_Yes"
         )
     }
+})
+basic.forever(function () {
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "©️ 2026 Quest Institute. All rights reserved."
+    )
 })
 basic.forever(function () {
     if (false) {
