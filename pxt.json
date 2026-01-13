@@ -9,7 +9,8 @@
         "joystickbit": "github:tinkertanker/pxt-joystickbit#v1.0.2",
         "microbit-pxt-rotate": "github:bsiever/microbit-pxt-rotate#v0.1.6",
         "25-0805-1750-Makecode_microbit-Comments-Extension": "github:jasonc1025-333/25-0805-1750-makecode_microbit-comments-extension#v0.0.2",
-        "23-1006-1820-RQ100-QuestCustomBlocks-Wukong-Oled (v0.35.0, 26-0111-1940)": "github:jasonc1025-333/23-1006-1820-rq100-questcustomblocks-wukong-oled#v0.35.0"
+        "23-1006-1820-RQ100-QuestCustomBlocks-Wukong-Oled (v0.35.0, 26-0111-1940)": "github:jasonc1025-333/23-1006-1820-rq100-questcustomblocks-wukong-oled#v0.35.0",
+        "23-1006-1820-RQ100-QuestCustomBlocks-Wukong-Oled (v0.35.1, 26-0112-2200)": "github:jasonc1025-333/23-1006-1820-rq100-questcustomblocks-wukong-oled#v0.35.1"
     },
     "files": [
         "main.blocks",
