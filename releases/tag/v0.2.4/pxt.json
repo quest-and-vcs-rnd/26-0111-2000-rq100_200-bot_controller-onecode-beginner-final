@@ -1,0 +1,25 @@
+{
+    "name": "26-0111-2000-rq100_200-bot_controller-onecode-beginner-final-releases-tag-v024",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "26-0111-2000-rq100_200-bot_controller-onecode-beginner-final": "github:quest-and-vcs-rnd/26-0111-2000-rq100_200-bot_controller-onecode-beginner-final"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "8.0.18",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
